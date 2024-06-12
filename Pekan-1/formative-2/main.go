@@ -15,7 +15,7 @@ func main() {
 	var kata4 string = "Sanbercode"
 	var kata5 string = "Golang"
 	
-	fmt.Println("%s %s %s %s %s\n", kata1, kata2, kata3, kata4, kata5)
+	fmt.Println(kata1, kata2, kata3, kata4, kata5)
 
 	//Soal 2
 	halo := "Halo Dunia"
@@ -43,16 +43,28 @@ func main() {
 
 	//Soal 4
 	var angkaPertama= "8";
-	// var angkaKedua= "5";
-	// var angkaKetiga= "6";
-	// var angkaKeempat = "7";	
+	var angkaKedua= "5";
+	var angkaKetiga= "6";
+	var angkaKeempat = "7";	
 
-	var angkaPertamaNew, err = strconv.Atoi(angkaPertama)
-	// var angkaKeduaNew, err = strconv.Atoi(angkaKedua)
-	// var angkaKetigaNew, err = strconv.Atoi(angkaKetiga)
-	// var angkaKeempatNew, err = strconv.Atoi(angkaKeempat)
+	var angkaPertamaNew, err1 = strconv.Atoi(angkaPertama)
+	var angkaKeduaNew, err2 = strconv.Atoi(angkaKedua)
+	var angkaKetigaNew, err3 = strconv.Atoi(angkaKetiga)
+	var angkaKeempatNew, err4 = strconv.Atoi(angkaKeempat)
 
-    if err == nil {
-        fmt.Println(angkaPertamaNew) // 124
+    if (err1 == nil && err2 == nil && err3 == nil && err4 == nil) {
+		var hasil = angkaPertamaNew + angkaKeduaNew + angkaKetigaNew + angkaKeempatNew
+        fmt.Println(hasil) 
     }
+
+	//Soal 5
+	kalimat := "halo halo bandung"
+	angka := 2021
+
+	var findHalo = "halo"  
+	var replaceWithHi = "Hi"
+
+	var newKalimat = `"` + strings.Replace(kalimat, findHalo, replaceWithHi, -1)+ `"`
+	fmt.Println(newKalimat,`- `,angka) 
+
 }
